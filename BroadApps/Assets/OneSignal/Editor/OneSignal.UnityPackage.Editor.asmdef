@@ -1,5 +1,6 @@
 {
     "name": "OneSignal.UnityPackage.Editor",
+    "rootNamespace": "",
     "references": [
         "OneSignal.Core.Editor",
         "OneSignal.Core"

@@ -53,7 +53,7 @@ public class StartLoading : MonoBehaviour
 
     private bool CheckWebview()
     {
-        _URL = PlayerPrefs.GetString("url1", "null");
+        _URL = PlayerPrefs.GetString("url", "null");
 
         if (_URL == "null")
             return false;

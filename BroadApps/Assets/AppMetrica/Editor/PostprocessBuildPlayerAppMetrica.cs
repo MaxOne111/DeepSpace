@@ -45,7 +45,7 @@ public class PostprocessBuildPlayerAppMetrica
         if (buildTarget == expectedTarget)
         {
             string projectPath = path + "/Unity-iPhone.xcodeproj/project.pbxproj";
-
+            
             PBXProject project = new PBXProject();
             project.ReadFromString(File.ReadAllText(projectPath));
 
