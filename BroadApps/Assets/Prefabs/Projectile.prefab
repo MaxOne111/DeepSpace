@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1100108417905102343}
   - component: {fileID: 5858971132929088203}
-  - component: {fileID: 3595282062501315273}
   - component: {fileID: 6928835314053311209}
+  - component: {fileID: 5526610104883872589}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3595282062501315273
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4039102461135499121}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fc6062d31494472954582811e4f200d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Movement_Speed: 15
 --- !u!58 &6928835314053311209
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -134,3 +121,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &5526610104883872589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4039102461135499121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcb3990c4b0540d09a88d31ddfff929a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _Movement_Speed: 15
+  _Damage: 10
+  _Projectile_Explosion: {fileID: 7150451904081233942, guid: e2da7201566e0714fab72155bba4e8e5, type: 3}

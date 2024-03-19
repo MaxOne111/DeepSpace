@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "472778639331",
+    "project_id": "deepspace-e8f24",
+    "storage_bucket": "deepspace-e8f24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:472778639331:android:b3625b286002fb2709c2d6",
+        "android_client_info": {
+          "package_name": "com.dai.d44pspac4unrladv4nt"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5RD1zn-wUBiX9Cut_3G5paEXteuf_Gkw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
