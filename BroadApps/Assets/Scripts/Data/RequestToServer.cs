@@ -5,10 +5,7 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.NetworkInformation;
-using System.Runtime.Serialization;
-using System.Text;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class RequestToServer : MonoBehaviour
 {

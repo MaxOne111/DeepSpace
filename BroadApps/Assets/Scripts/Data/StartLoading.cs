@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
+using UnityEngine.iOS;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,7 +11,7 @@ public class StartLoading : MonoBehaviour
 {
     [SerializeField] private RequestToServer _Request_To_Server;
     [SerializeField] private FirebaseConfig _Firebse_Config;
-    [SerializeField] private BrowserOpener _Webview;
+    [SerializeField] private Webview _Webview;
 
     [SerializeField] private GameObject _Loading_Screen_First;
     [SerializeField] private GameObject _Loading_Screen_Next;
@@ -51,7 +52,7 @@ public class StartLoading : MonoBehaviour
 
     private void StartProcess() => StartCoroutine(AppOpeningProcess());
 
-    private bool CheckWebview()
+    private bool WebviewWasOpening()
     {
         _URL = PlayerPrefs.GetString("url", "null");
 
@@ -63,20 +64,22 @@ public class StartLoading : MonoBehaviour
 
     private IEnumerator AppOpeningProcess()
     {
-        if (CheckWebview())
+        if (WebviewWasOpening())
         {
             _Loading_Screen_Next.SetActive(true);
             
             if (_Firebse_Config.ConfigValues["isChangeAllURL"] == "true")
             {
-                OpenWebviewButton();
-                
-                _User_Onboarding.SetActive(true);
+                Debug.Log($"Url has been changed on {_Firebse_Config.ConfigValues["url_link"]}");
+
                 _Webview.LoadURL(_Firebse_Config.ConfigValues["url_link"]);
+                _Webview.Open();
             }
             else
             {
-                _Webview.LoadURL(_URL);
+                Debug.Log("Last saved url");
+                
+                _Webview.LoadURL();
                 _Webview.Open();
             }
             
@@ -129,6 +132,19 @@ public class StartLoading : MonoBehaviour
             _Reviewer_Onboarding.SetActive(true);
         }
 
+    }
+
+    public void ShowRateMassage() => StartCoroutine(RateUs());
+
+    private IEnumerator RateUs()
+    {
+        float _delay = 1;
+
+        yield return new WaitForSeconds(_delay);
+        
+        Debug.Log("Rate us");
+        
+        Device.RequestStoreReview();
     }
     
     private void OnDisable() => _Firebse_Config._On_Loaded -= StartProcess;

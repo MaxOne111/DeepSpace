@@ -63,6 +63,10 @@ public sealed class PlayerMovement : MonoBehaviour
     
     private IEnumerator CheckPosition()
     {
+        yield return new WaitForSeconds(0.001f);
+        
+        _Transform.position = new Vector3(-ScreenParams.ScreenLocal(3,0).x, 0);
+        
         while (_Transform.position.y > -ScreenParams.ScreenLocal(0,0).y)
         {
             yield return null;

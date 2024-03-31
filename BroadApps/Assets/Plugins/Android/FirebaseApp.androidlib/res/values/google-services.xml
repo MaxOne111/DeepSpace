@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
-  <string name="gcm_defaultSenderId" translatable="false">674375849953</string>
-  <string name="google_storage_bucket" translatable="false">deepspace-150a5.appspot.com</string>
-  <string name="project_id" translatable="false">deepspace-150a5</string>
-  <string name="google_api_key" translatable="false">AIzaSyDVn9aBVo1q99aVUhaGJaB_GnZ9uPO_170</string>
-  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDVn9aBVo1q99aVUhaGJaB_GnZ9uPO_170</string>
-  <string name="google_app_id" translatable="false">1:674375849953:android:4f808980d07b10c603e4a0</string>
+  <string name="gcm_defaultSenderId" translatable="false">210688448714</string>
+  <string name="google_storage_bucket" translatable="false">deepspaceapp-7703f.appspot.com</string>
+  <string name="project_id" translatable="false">deepspaceapp-7703f</string>
+  <string name="google_api_key" translatable="false">AIzaSyAL5FeTSg1grksTm3ilb1vfzyZNvuo-xbc</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAL5FeTSg1grksTm3ilb1vfzyZNvuo-xbc</string>
+  <string name="google_app_id" translatable="false">1:210688448714:android:0568d7bdc20986ae2d3c33</string>
 </resources>

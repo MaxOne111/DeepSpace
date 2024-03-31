@@ -14,18 +14,15 @@ public class OneSignalInitialize : MonoBehaviour
     private void Start()
     {
         Init();
-        PermissionRequestsInit();
     }
+    
 
-    private void PermissionRequestsInit()
+    public void PermissionRequestsPush()
     {
         OneSignal.InAppMessages.Paused = false;
         
         OneSignal.Notifications.RequestPermissionAsync(true);
-    }
-
-    private void PermissionRequestsPush()
-    {
+        
         OneSignal.User.PushSubscription.OptIn();
         Debug.Log("Show push notification");
     }

@@ -1,4 +1,5 @@
-﻿using DG.Tweening;
+﻿
+using System.Collections;
 using UnityEngine;
 
 public class RobotBossFactory : EnemyFactory
@@ -18,10 +19,19 @@ public class RobotBossFactory : EnemyFactory
         RobotBoss _instance = GetInstance(_spawn_Point) as RobotBoss;
         _instance.Init(DestroySpawnedObject);
 
-        _instance.transform.DOMoveY(0, 2)
-            .SetLink(_instance.gameObject)
-            .SetEase(Ease.OutBack);
+        StartCoroutine(Appearance(_instance.transform));
 
+    }
+
+    private IEnumerator Appearance(Transform _transform)
+    {
+        Vector3 _position = new Vector3(_Screen_Offset.x, 0);
+        
+        while (_transform.position != _position)
+        {
+            _transform.position = Vector3.Lerp(_transform.position, _position, 2 * Time.deltaTime);
+            yield return null;
+        }
     }
     
     private void OnDisable() => GameEvents._Boss_Apperaring -= CreateBoss;

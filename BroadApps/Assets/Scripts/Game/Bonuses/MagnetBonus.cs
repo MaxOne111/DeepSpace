@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
@@ -49,7 +48,7 @@ public sealed class MagnetBonus : ActivableBonus, IDuration
            {
                for (int i = 0; i < _bonuses.Length; i++)
                {
-                   _bonuses[i].transform.DOMove(_Player.position, 1f).SetLink(_bonuses[i].gameObject);
+                   _bonuses[i].transform.position = Vector3.Lerp(_bonuses[i].transform.position, _Player.position, 2 * Time.deltaTime);
                }
            }
 
@@ -60,7 +59,7 @@ public sealed class MagnetBonus : ActivableBonus, IDuration
 
         _Current_Coroutine = null;
     }
-
+    
 
     private bool HaveCoroutine()
     {

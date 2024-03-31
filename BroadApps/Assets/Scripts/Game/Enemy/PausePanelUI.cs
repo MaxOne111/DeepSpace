@@ -27,7 +27,7 @@ public class PausePanelUI : AudioUI
         _Vibration_Toggle.onValueChanged.AddListener(delegate { SwitchVibration(_Vibration_Toggle); });
     }
 
-    public void ToMainMenu() => SceneManager.LoadScene(0);
+    public void ToMainMenu() => SceneManager.LoadScene(1);
 
     private void SwitchMusic(Toggle _toggle)
     {

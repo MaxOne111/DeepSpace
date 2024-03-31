@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.iOS;
 
 public class GeneralSettings : MonoBehaviour
 {
@@ -20,5 +21,10 @@ public class GeneralSettings : MonoBehaviour
             return;
         
         Application.OpenURL(_Policy);
+    }
+
+    public void RateUs()
+    {
+        Device.RequestStoreReview();
     }
 }

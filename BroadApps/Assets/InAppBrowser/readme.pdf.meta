@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c4e7f577c6e1845d4b7efbd95192a150
+timeCreated: 1458729303
+licenseType: Store
+DefaultImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57532
+  packageName: In-App Web Browser
+  packageVersion: 2.0.4
+  assetPath: Assets/InAppBrowser/readme.pdf
+  uploadId: 548679

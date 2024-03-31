@@ -12,6 +12,14 @@ public class BrowserOpener : MonoBehaviour
 	[SerializeField] private GameObject _Back;
 	[SerializeField] private GameObject _Audio;
 
+	private InAppBrowser.EdgeInsets _Insets;
+	
+#if UNITY_IOS
+
+	private void Margin() => _Insets = new InAppBrowser.EdgeInsets(50, 0, 0, 0);
+
+#endif
+
 	private void OnEnable() => _Bridge.onBrowserFinishedLoading.AddListener(LoadURL);
 
 	private void Start()
@@ -39,8 +47,12 @@ public class BrowserOpener : MonoBehaviour
 		ChangeScreenOrientation();
 		
 		yield return new WaitForSeconds(_delay);
-		
+
 		InAppBrowser.DisplayOptions _options = new InAppBrowser.DisplayOptions();
+		
+		//Margin();
+
+		_options.insets = new InAppBrowser.EdgeInsets(50, 0, 0, 0);
 		_options.hidesTopBar = false;
 		_options.androidBackButtonCustomBehaviour = true;
 		_options.hidesDefaultSpinner = true;

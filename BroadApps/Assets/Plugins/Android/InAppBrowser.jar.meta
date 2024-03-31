@@ -29,3 +29,10 @@ PluginImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 57532
+  packageName: In-App Web Browser
+  packageVersion: 2.0.4
+  assetPath: Assets/Plugins/Android/InAppBrowser.jar
+  uploadId: 548679
