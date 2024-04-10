@@ -13,9 +13,6 @@ public class StartLoading : MonoBehaviour
     [SerializeField] private FirebaseConfig _Firebse_Config;
     [SerializeField] private Webview _Webview;
 
-    [SerializeField] private GameObject _Loading_Screen_First;
-    [SerializeField] private GameObject _Loading_Screen_Next;
-    
     [SerializeField] private GameObject _User_Onboarding;
     [SerializeField] private GameObject _Reviewer_Onboarding;
 
@@ -66,8 +63,7 @@ public class StartLoading : MonoBehaviour
     {
         if (WebviewWasOpening())
         {
-            _Loading_Screen_Next.SetActive(true);
-            
+
             if (_Firebse_Config.ConfigValues["isChangeAllURL"] == "true")
             {
                 Debug.Log($"Url has been changed on {_Firebse_Config.ConfigValues["url_link"]}");
@@ -85,9 +81,7 @@ public class StartLoading : MonoBehaviour
             
             yield break;
         }
-            
-        _Loading_Screen_First.SetActive(true);
-        
+
         if (_Firebse_Config.ConfigValues["isDead"] == "true")
         {
             OpenWebviewButton();
